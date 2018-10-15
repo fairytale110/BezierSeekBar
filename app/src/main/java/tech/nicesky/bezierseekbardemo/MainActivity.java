@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         fram.addView(seekBar);
-        checkLength(seekBar.getValueSelected());
+
+        //checkLength(seekBar.getValueSelected());
     }
 }

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    android:background="#ef5350"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:text="你的体重是多少？"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txt_statue"
+        android:layout_width="match_parent"
+        android:text="balance"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:gravity="left"
+        android:textStyle="italic"
+        android:layout_height="wrap_content" />
+
+    <tech.nicesky.bezierseekbar.BezierSeekBar
+        android:id="@+id/bsBar_test"
+        app:bsBar_color_ball="@android:color/white"
+        app:bsBar_color_bg_selected="@android:color/white"
+        app:bsBar_color_line="@android:color/white"
+        app:bsBar_color_value="@android:color/white"
+        app:bsBar_color_value_selected="#ef5350"
+        app:bsBar_value_min="30"
+        app:bsBar_value_max="120"
+        app:bsBar_value_selected="65"
+        app:bsBar_unit="kg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:text="你的尺寸？"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:gravity="left"
+        android:background="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txt_statue2"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:text="balance"
+        android:textSize="25sp"
+        android:gravity="left"
+        android:background="@android:color/white"
+        android:textStyle="italic"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/fram"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="0dp">
+
+    </LinearLayout>
+</LinearLayout>

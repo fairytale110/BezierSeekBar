@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BezierSeekBar">
+        <attr name="bsBar_color_line" format="reference|color" />
+        <attr name="bsBar_color_ball" format="reference|color" />
+        <attr name="bsBar_color_value" format="reference|color" />
+        <attr name="bsBar_color_value_selected" format="reference|color" />
+        <attr name="bsBar_color_bg_selected" format="reference|color" />
+        <attr name="bsBar_value_min" format="integer" />
+        <attr name="bsBar_value_max" format="integer" />
+        <attr name="bsBar_value_selected" format="integer" />
+        <attr name="bsBar_unit" format="reference|string" />
+    </declare-styleable>
+</resources>

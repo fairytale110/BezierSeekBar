@@ -1,1 +1,2 @@
 include ':app',':libBezierSeekBar'
+include ':app',':libBezierSeekBar'

@@ -1,33 +1,30 @@
 
-## SquaresLoadingView
-> A SquaresLoadingView based on android.View, nicely rotation、easy to use.
+## BezierSeekBar
+> Beautiful custom View, SeekBar selector, easy to use, and rich in customization.
 
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg)](https://android-arsenal.com/api?level=19) 
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Download](https://img.shields.io/badge/Download-1.0.0-brightgreen.svg) ](https://github.com/fairytale110/SquaresLoadingView/archive/1.0.0.zip)
+[![Download](https://img.shields.io/badge/Download-1.0.0-brightgreen.svg) ](https://github.com/fairytale110/BezierSeekBar/archive/1.0.1.zip)
 
 ### Preview
 
-![preview.gif](https://upload-images.jianshu.io/upload_images/1781452-f256a5f5da4f9026.gif?imageMogr2/auto-orient/strip)
+![preview.gif](https://github.com/fairytale110/BezierSeekBar/raw/master/release/preview_1.0.1.gif)
+
+### DEMO
+
+ [![Download Demo APK](https://img.shields.io/badge/Download%20APK-1.0.1-brightgreen.svg) ](https://github.com/fairytale110/BezierSeekBar/raw/master/release/app-release.apk) 
+or you can scan this QRcode to download 
+
+![APK 1.0.1](https://github.com/fairytale110/BezierSeekBar/raw/master/release/demo_1.0.1_qrcode.png)
 
 ### Features
 
 Supported functions：
-
-- [x] Optionally configure the colors of each square
-- [x] Manually stop and start the animation
-- [x] Configurable anim's speed
-
-- [x] Support the padding settings
-
-
-Support will be forthcoming:
-
-- [ ] Manual rotation
-
-- [ ] Refresh header view support
-
-- [ ] Etc 
+- [x] Easy to use！
+- [x] Optionally configure the colors of ALL
+- [x] Smooth Bezier animation effects
+- [x] Freely configure the selection interval
+- [x] Dynamic monitoring of changes in selection
 
 ### How to 
 
@@ -45,9 +42,9 @@ Add it in your root build.gradle at the end of repositories:
 ```
 Step 2. Add the dependency
 ```
- dependencies {
-     implementation 'com.github.fairytale110:SquaresLoadingView:1.0.0'
- }
+	dependencies {
+	        implementation 'com.github.fairytale110:BezierSeekBar:1.0.1'
+	}
 ```
 
 ### Usage
@@ -106,12 +103,8 @@ fairytale110@foxmail.com
 
 > 掘金: https://juejin.im/user/596d91ee6fb9a06bb874a800
 
-> CSDN: https://blog.csdn.net/LJYBQ
 
-> MY WEB: https://nicesky.tech
-
-
-## LICENSE
+### LICENSE
 
 ```
   Copyright 2018 fairytale110
@@ -128,3 +121,5 @@ fairytale110@foxmail.com
   See the License for the specific language governing permissions and
   limitations under the License.
 ```
+
+### Github :https://github.com/fairytale110/BezierSeekBar

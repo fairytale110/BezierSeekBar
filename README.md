@@ -102,7 +102,7 @@ fairytale110@foxmail.com
 fairytale110@foxmail.com
 > 简书: http://jianshu.com/u/d95b27ffdd3c
 
-> 掘金: https://juejin.im/user/596d91ee6fb9a06bb874a800
+> 掘金: https://juejin.im/user/596d91ee6fb9a06bb874a800/pins
 
 
 ### LICENSE

@@ -13,7 +13,8 @@
 ### 演示 DEMO
 
  [![Download Demo APK](https://img.shields.io/badge/Download%20APK-1.0.1-brightgreen.svg) ](https://github.com/fairytale110/BezierSeekBar/raw/master/release/app-release.apk) 
-or you can scan this QRcode to download 
+
+或者直接手机扫码下载：
 
 ![APK 1.0.1](https://github.com/fairytale110/BezierSeekBar/raw/master/release/demo_1.0.1_qrcode.png)
 
@@ -27,7 +28,7 @@ or you can scan this QRcode to download
 - [x] 自由配置样式
 - [x] 选择区间可控、实时监听选择结果。
 
-### How to 
+### 怎么使用？ 
 
 仓库引用:
 
@@ -65,7 +66,7 @@ or you can scan this QRcode to download
         android:layout_height="wrap_content"
         />
 ```
-或者
+或者 
 ```java
 
    private void createBsbar() {

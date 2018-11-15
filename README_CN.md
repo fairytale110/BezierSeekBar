@@ -94,6 +94,10 @@
     }
 ```
 
+### 源码解析
+
+https://juejin.im/post/5bebed2fe51d450df867c3c1
+
 ### 参与贡献
 fairytale110@foxmail.com
 

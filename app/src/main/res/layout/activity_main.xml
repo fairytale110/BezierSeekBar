@@ -3,75 +3,82 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
     android:layout_height="match_parent"
     android:background="#ef5350"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <android.support.v7.widget.AppCompatTextView
         android:layout_width="match_parent"
-        android:text="你的体重是多少？"
-        android:textSize="30sp"
-        android:padding="10dp"
+        android:layout_height="wrap_content"
         android:gravity="left"
-        android:textStyle="bold"
+        android:padding="10dp"
+        android:text="你的体重是多少？"
         android:textColor="@android:color/white"
-        android:layout_height="wrap_content" />
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/txt_statue"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
         android:text="balance"
         android:textColor="@android:color/white"
-        android:layout_marginTop="20dp"
         android:textSize="25sp"
-        android:gravity="left"
-        android:textStyle="italic"
-        android:layout_height="wrap_content" />
+        android:textStyle="italic" />
 
     <tech.nicesky.bezierseekbar.BezierSeekBar
         android:id="@+id/bsBar_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:bsBar_color_ball="@android:color/white"
         app:bsBar_color_bg_selected="@android:color/white"
         app:bsBar_color_line="@android:color/white"
         app:bsBar_color_value="@android:color/white"
         app:bsBar_color_value_selected="#ef5350"
-        app:bsBar_value_min="30"
-        app:bsBar_value_max="120"
-        app:bsBar_value_selected="65"
         app:bsBar_unit="kg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        app:bsBar_value_max="150"
+        app:bsBar_value_min="20"
+        app:bsBar_value_selected="65" />
 
     <android.support.v7.widget.AppCompatTextView
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:gravity="left"
+        android:padding="10dp"
         android:text="你的尺寸？"
         android:textSize="30sp"
-        android:padding="10dp"
-        android:gravity="left"
-        android:background="@android:color/white"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content" />
+        android:textStyle="bold" />
+
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/txt_statue2"
-        android:padding="10dp"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="left"
+        android:padding="10dp"
         android:text="balance"
         android:textSize="25sp"
-        android:gravity="left"
-        android:background="@android:color/white"
-        android:textStyle="italic"
-        android:layout_height="wrap_content" />
+        android:textStyle="italic" />
 
     <LinearLayout
         android:id="@+id/fram"
         android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:gravity="center"
-        android:layout_height="0dp">
+        android:gravity="center">
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_setValueSelected"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Value random" />
 </LinearLayout>

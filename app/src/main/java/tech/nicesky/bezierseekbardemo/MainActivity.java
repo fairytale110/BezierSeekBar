@@ -4,7 +4,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import tech.nicesky.bezierseekbar.BezierSeekBar;
@@ -13,6 +15,11 @@ import tech.nicesky.bezierseekbar.OnSelectedListener;
 public class MainActivity extends AppCompatActivity {
     AppCompatTextView txtStatus, txtStatus2;
     LinearLayout fram;
+    private Button btnSetSValue;
+
+    BezierSeekBar seekBarInView;
+    BezierSeekBar seekBarCreated;
+    int max,min;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +29,22 @@ public class MainActivity extends AppCompatActivity {
         txtStatus = findViewById(R.id.txt_statue);
         txtStatus2 = findViewById(R.id.txt_statue2);
         fram = findViewById(R.id.fram);
+        seekBarInView = findViewById(R.id.bsBar_test);
+        findViewById(R.id.btn_setValueSelected).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int value2Show = (int)(Math.random()*(max-min+1)+min);
+                seekBarInView.setValueSelected(value2Show);
+                seekBarCreated.setValueSelected(value2Show);
+            }
+        });
 
-        BezierSeekBar seekBar = findViewById(R.id.bsBar_test);
+        max = 150;
+        min = 20;
 
-        checkWeight(seekBar.getValueSelected());
+        checkWeight(seekBarInView.getValueSelected());
 
-        seekBar.setSelectedListener(new OnSelectedListener() {
+        seekBarInView.setSelectedListener(new OnSelectedListener() {
             @Override
             public void onSelected(int value) {
                 checkWeight(value);
@@ -60,26 +77,26 @@ public class MainActivity extends AppCompatActivity {
     private void createBsbar() {
         fram.setBackgroundColor(Color.WHITE);
 
-        BezierSeekBar seekBar = new BezierSeekBar(this);
-        seekBar.setColorBall(Color.BLACK);
-        seekBar.setColorLine(Color.BLACK);
-        seekBar.setColorValueSelected(Color.WHITE);
-        seekBar.setColorValue(Color.BLACK);
-        seekBar.setColorBgSelected(Color.BLACK);
-        seekBar.setValueMax(150);
-        seekBar.setValueMin(20);
-        seekBar.setValueSelected(60);
-        seekBar.setUnit("mm");
-        seekBar.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        seekBarCreated = new BezierSeekBar(this);
+        seekBarCreated.setColorBall(Color.BLACK);
+        seekBarCreated.setColorLine(Color.BLACK);
+        seekBarCreated.setColorValueSelected(Color.WHITE);
+        seekBarCreated.setColorValue(Color.BLACK);
+        seekBarCreated.setColorBgSelected(Color.BLACK);
+        seekBarCreated.setValueMax(150);
+        seekBarCreated.setValueMin(20);
+        seekBarCreated.setValueSelected(60);
+        seekBarCreated.setUnit("mm");
+        seekBarCreated.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
-        seekBar.setSelectedListener(new OnSelectedListener() {
+        seekBarCreated.setSelectedListener(new OnSelectedListener() {
             @Override
             public void onSelected(int value) {
                 checkLength(value);
             }
         });
 
-        fram.addView(seekBar);
+        fram.addView(seekBarCreated);
 
         //checkLength(seekBar.getValueSelected());
     }

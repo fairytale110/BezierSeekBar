@@ -4,7 +4,7 @@
 
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg)](https://android-arsenal.com/api?level=19) 
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Download](https://img.shields.io/badge/Download-1.0.0-brightgreen.svg) ](https://github.com/fairytale110/BezierSeekBar/archive/1.0.1.zip)
+[![Download](https://img.shields.io/badge/Download-1.0.0-brightgreen.svg) ](https://github.com/fairytale110/BezierSeekBar/archive/1.0.3.zip)
 
 [中文README](https://github.com/fairytale110/BezierSeekBar/blob/master/README_CN.md)
 ### Preview
@@ -16,7 +16,7 @@
  [![Download Demo APK](https://img.shields.io/badge/Download%20APK-1.0.1-brightgreen.svg) ](https://github.com/fairytale110/BezierSeekBar/raw/master/release/app-release.apk) 
 or you can scan this QRcode to download 
 
-![APK 1.0.1](https://github.com/fairytale110/BezierSeekBar/raw/master/release/demo_1.0.1_qrcode.png)
+![APK 1.0.3](https://github.com/fairytale110/BezierSeekBar/raw/master/release/demo_1.0.1_qrcode.png)
 
 ### Features
 

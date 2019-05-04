@@ -30,6 +30,7 @@ import java.text.DecimalFormat;
  * @email fairytale110@foxmail.com
  * @description:
  */
+@SuppressWarnings("all")
 public class BezierSeekBar extends View {
 
     private Context context;
@@ -513,4 +514,5 @@ public class BezierSeekBar extends View {
     public void setUnit(String unit) {
         this.unit = unit;
     }
+
 }

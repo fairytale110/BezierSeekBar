@@ -4,7 +4,7 @@
 
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg)](https://android-arsenal.com/api?level=19) 
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Download](https://img.shields.io/badge/Download-1.0.0-brightgreen.svg) ](https://github.com/fairytale110/BezierSeekBar/archive/1.0.3.zip)
+[![Download](https://img.shields.io/badge/Download-1.0.4-green.svg) ](https://github.com/fairytale110/BezierSeekBar/archive/1.0.4.zip)
 
 [中文README](https://github.com/fairytale110/BezierSeekBar/blob/master/README_CN.md)
 ### Preview
@@ -13,7 +13,7 @@
 
 ### DEMO
 
- [![Download Demo APK](https://img.shields.io/badge/Download%20APK-1.0.1-brightgreen.svg) ](https://github.com/fairytale110/BezierSeekBar/raw/master/release/app-release.apk) 
+ [![Download Demo APK](https://img.shields.io/badge/Download%20APK-1.0.4-green.svg) ](https://github.com/fairytale110/BezierSeekBar/raw/master/release/app-release.apk) 
 or you can scan this QRcode to download 
 
 ![APK 1.0.3](https://github.com/fairytale110/BezierSeekBar/blob/master/release/1556949573.png?raw=trueg)
@@ -44,7 +44,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 ```
 	dependencies {
-	        implementation 'com.github.fairytale110:BezierSeekBar:1.0.3'
+	        implementation 'com.github.fairytale110:BezierSeekBar:1.0.4'
 	}
 ```
 

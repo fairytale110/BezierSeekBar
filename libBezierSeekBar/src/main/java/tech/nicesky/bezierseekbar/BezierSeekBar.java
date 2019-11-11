@@ -42,7 +42,6 @@ public class BezierSeekBar extends View {
 
     private int width;
     private int height;
-
     /**
      * View默认高度
      */
@@ -65,7 +64,7 @@ public class BezierSeekBar extends View {
     /**
      * 触摸点的坐标
      */
-    private float fingerX, fingerXDefault, fingerYDefault;
+    private float fingerX, fingerXmin = circleRadiusMin, fingerXMax, fingerXDefault, fingerYDefault;
 
     private float textSelectedSize = 20f;
 
@@ -272,7 +271,7 @@ public class BezierSeekBar extends View {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         width = this.getMySize(this.diameterDefault, widthMeasureSpec);
-
+        fingerXMax = width - circleRadiusMin;
         if (getLayoutParams().height == ViewGroup.LayoutParams.WRAP_CONTENT) {
             height = this.diameterDefault;
         } else {
@@ -320,11 +319,10 @@ public class BezierSeekBar extends View {
         //ball
         canvas.drawCircle(this.fingerX, (float) 2 * height / 3 + spaceToLine + circleRadius, circleRadius, ballPaint);
 
-        canvas.drawText("" + valueMin, 20F, (float) 2 * height / 3F + textSize, textDownPaint);
-        canvas.drawText("" + valueMax, width - getTextWidth(textDownPaint, "200") - 20F, (float) 2 * height / 3F + dp2px(getContext(), 12F), textDownPaint);
+        canvas.drawText("" + valueMin, 1F, (float) 2 * height / 3F + textSize, textDownPaint);
+        canvas.drawText("" + valueMax, width - getTextWidth(textDownPaint, "200") - 1F, (float) 2 * height / 3F + dp2px(getContext(), 12F), textDownPaint);
 
         String text = valueSelected + unit;
-
 
         float valueX = this.fingerX - getTextWidth(textPaint, text) / 2F - 20F;
         float valueXend = fingerX + getTextWidth(textPaint, text) / 2F + 20F;
@@ -348,6 +346,11 @@ public class BezierSeekBar extends View {
         canvas.drawText(text, valueX + 20F, (float) 2 * height / 3F - bezierHeight * 2 - 15F, textPaint);
     }
 
+    private boolean robTouchEvent = false;
+
+    public boolean isRobTouchEvent() {
+        return robTouchEvent;
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -356,32 +359,31 @@ public class BezierSeekBar extends View {
             case MotionEvent.ACTION_DOWN:
                 //Log.e("onTouchEvent","ACTION_DOWN");
                 fingerX = event.getX();
-                if (fingerX < 0F) fingerX = 0F;
-                if (fingerX > width) fingerX = width;
+                if (fingerX < fingerXmin) fingerX = fingerXmin;
+                if (fingerX > fingerXMax) fingerX = fingerXMax;
                 //在这里执行动画
                 this.animatorFingerIn.start();
                 break;
 
             case MotionEvent.ACTION_MOVE:
+                robTouchEvent = true;
                 //Log.e("onTouchEvent","ACTION_MOVE");
                 fingerX = event.getX();
-                if (fingerX < 0F) fingerX = 0F;
-                if (fingerX > width) fingerX = width;
+                if (fingerX < fingerXmin) fingerX = fingerXmin;
+                if (fingerX > fingerXMax) fingerX = fingerXMax;
                 postInvalidate();
                 break;
 
             case MotionEvent.ACTION_UP:
+                robTouchEvent = false;
                 //在这里执行动画
                 this.animatorFingerOut.start();
                 break;
         }
-
-        valueSelected = Integer.valueOf(decimalFormat.format(valueMin + (valueMax - valueMin) * fingerX / width));
-
+        valueSelected = Integer.valueOf(decimalFormat.format(valueMin + (valueMax - valueMin) * (fingerX - fingerXmin) / (fingerXMax - fingerXmin)));
         if (selectedListener != null) {
             selectedListener.onSelected(valueSelected);
         }
-
         return true;
     }
 
@@ -493,7 +495,7 @@ public class BezierSeekBar extends View {
 
     public void setValueSelected(int valueSelected) {
         this.valueSelected = valueSelected;
-        this.fingerXDefault = width * (float) (this.valueSelected - valueMin) / (float) (this.valueMax - this.valueMin);
+        this.fingerXDefault = fingerXMax * (float) (this.valueSelected - valueMin) / (float) (this.valueMax - this.valueMin);
         this.fingerX = this.fingerXDefault;
         postInvalidate();
     }
@@ -507,7 +509,7 @@ public class BezierSeekBar extends View {
         this.selectedListener = selectedListener;
     }
 
-    public int getValueSelected(){
+    public int getValueSelected() {
         return valueSelected;
     }
 

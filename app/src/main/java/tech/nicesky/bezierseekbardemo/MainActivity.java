@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -56,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkWeight(int value) {
         if (value > 75) {
-            txtStatus.setText("超重");
+            txtStatus.setText("泰山");
         } else if (value < 60) {
-            txtStatus.setText("偏轻");
+            txtStatus.setText("鸿毛");
         } else {
-            txtStatus.setText("平衡");
+            txtStatus.setText("波澜不惊");
         }
     }
 
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (value < 50) {
             txtStatus2.setText("绣花针");
         } else {
-            txtStatus2.setText("一般般");
+            txtStatus2.setText("中指");
         }
     }
 
@@ -83,9 +84,9 @@ public class MainActivity extends AppCompatActivity {
         seekBarCreated.setColorValueSelected(Color.WHITE);
         seekBarCreated.setColorValue(Color.BLACK);
         seekBarCreated.setColorBgSelected(Color.BLACK);
-        seekBarCreated.setValueMax(150);
-        seekBarCreated.setValueMin(20);
-        seekBarCreated.setValueSelected(60);
+        seekBarCreated.setValueMax(152);
+        seekBarCreated.setValueMin(30);
+        seekBarCreated.setValueSelected(30 + 152/2 - 30/2);
         seekBarCreated.setUnit("mm");
         seekBarCreated.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 

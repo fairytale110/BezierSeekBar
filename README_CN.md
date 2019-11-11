@@ -4,7 +4,7 @@
 
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg)](https://android-arsenal.com/api?level=19) 
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Download](https://img.shields.io/badge/Download-1.0.0-brightgreen.svg) ](https://github.com/fairytale110/BezierSeekBar/archive/1.0.1.zip)
+[![Download](https://img.shields.io/badge/Download-1.0.4-green.svg) ](https://github.com/fairytale110/BezierSeekBar/archive/1.0.1.zip)
 
 ### 预览
 
@@ -12,7 +12,7 @@
 
 ### 演示 DEMO
 
- [![Download Demo APK](https://img.shields.io/badge/Download%20APK-1.0.1-brightgreen.svg) ](https://github.com/fairytale110/BezierSeekBar/raw/master/release/app-release.apk) 
+ [![Download Demo APK](https://img.shields.io/badge/Download%20APK-1.0.4-green.svg) ](https://github.com/fairytale110/BezierSeekBar/raw/master/release/app-release.apk) 
 
 或者直接手机扫码下载：
 
@@ -44,7 +44,7 @@
 步骤 2. 添加仓库
 ```
 	dependencies {
-	        implementation 'com.github.fairytale110:BezierSeekBar:1.0.1'
+	        implementation 'com.github.fairytale110:BezierSeekBar:1.0.4'
 	}
 ```
 

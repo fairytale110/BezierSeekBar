@@ -9,7 +9,7 @@
 [中文README](https://github.com/fairytale110/BezierSeekBar/blob/master/README_CN.md)
 ### Preview
 
-![preview.gif](https://github.com/fairytale110/BezierSeekBar/raw/master/release/preview_1.0.1.gif)
+![preview.gif](https://github.com/fairytale110/BezierSeekBar/release/preview_1.0.1.gif)
 
 ### DEMO
 

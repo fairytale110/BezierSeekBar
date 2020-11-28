@@ -64,6 +64,11 @@
         app:bsBar_unit="kg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+	app:bsBar_down_text_margin_top="11dp"
+        app:bsBar_down_text_size="14sp"
+        app:bsBar_select_text_size="20sp"
+        app:bsBar_ball_circle_radius="4dp"
+        app:bsBar_line_width="1dp"
         />
 ```
 或者 

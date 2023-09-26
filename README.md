@@ -97,17 +97,6 @@ or
 ### blog(CN)
 https://juejin.im/post/5bebed2fe51d450df867c3c1
 
-### Participate in the contribution
-fairytale110@foxmail.com
-
-
-### Author
-fairytale110@foxmail.com
-> 简书: http://jianshu.com/u/d95b27ffdd3c
-
-> 掘金: https://juejin.im/user/596d91ee6fb9a06bb874a800/pins
-
-
 ### LICENSE
 
 ```
@@ -125,5 +114,3 @@ fairytale110@foxmail.com
   See the License for the specific language governing permissions and
   limitations under the License.
 ```
-
-### Github :https://github.com/fairytale110/BezierSeekBar

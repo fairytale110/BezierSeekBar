@@ -98,17 +98,6 @@
 
 https://juejin.im/post/5bebed2fe51d450df867c3c1
 
-### 参与贡献
-fairytale110@foxmail.com
-
-
-### 作者
-fairytale110@foxmail.com
-> 简书: http://jianshu.com/u/d95b27ffdd3c
-
-> 掘金: https://juejin.im/user/596d91ee6fb9a06bb874a800/pins
-
-
 ### 开源协议
 
 ```
